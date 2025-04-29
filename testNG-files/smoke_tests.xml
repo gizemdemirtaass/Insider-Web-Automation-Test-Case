@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Insider Smoke Test Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="utilities.listeners.TestListener"></listener>
+    </listeners>
+    <test name="Insider Test Suite Chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="pageTests.Welcome_Page_Tests"></class>
+            <class name="pageTests.Career_Page_Tests"></class>
+            <class name="pageTests.Quality_Assurance_Page_Tests"></class>
+
+        </classes>
+    </test>
+
+    <!--Paralel Test için aşağıdaki yorum satırının kaldırılması gerekmedir-->
+
+    <!--<test name="Insider Test Suite Firefox">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="pageTests.Welcome_Page_Tests"></class>
+            <class name="pageTests.Career_Page_Tests"></class>
+            <class name="pageTests.Quality_Assurance_Page_Tests"></class>
+
+        </classes>
+    </test>-->
+</suite>
